@@ -1,0 +1,326 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.hero {
+    width: 100%;
+    height: 100%;
+    max-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assets/background-2.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    /* border: 1px solid white; */
+}
+
+.main-width {
+    width: 1280px;
+    max-width: 95%;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0 20px;
+    /* border: 1px solid blue; */
+    position: relative;
+}
+
+header {
+    /* border: 1px solid red; */
+    padding: 40px 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.logo i {
+    height: 55px;
+    width: 55px;
+    background: transparent;
+    font-size: 20px;
+    border: 2px solid #15767c;
+    border-radius: 50%;
+    color: #155d7c;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+nav .hamb {
+    height: 23px;
+    width: 30px;
+    position: absolute;
+    right: 5%;
+    top: 56px;
+    z-index: 5;
+    background: transparent;
+    cursor: pointer;
+    display: none;
+}
+
+nav .hamb span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #15767c;
+    transition: .3s;
+    transition-property: transform, opacity;
+}
+
+nav .hamb span:nth-child(2) {
+    margin: 7px 0;
+}
+
+nav .nav-list {
+    list-style: none;
+}
+
+nav .nav-list li {
+    display: inline-block;
+}
+
+nav .nav-list li a {
+    font-weight: 400;
+    padding: 5px 20px;
+    color: #eee;
+}
+
+nav .nav-list li:not(:last-child) a:hover {
+    color: #15767c;
+    transition: 0.4s;
+}
+
+nav .nav-list .btn a {
+    border: 2px solid #15767c;
+    border-radius: 60px;
+}
+
+nav .nav-list .btn a {
+    color: #15767c;
+}
+
+nav .nav-list .btn a:hover {
+    background-color: #15767c;
+    color: #eee;
+    border: 2px solid transparent;
+    transition: 0.4s;
+}
+
+.container {
+    /* border: 1px solid green; */
+    padding-top: 110px;
+}
+
+/* .container .hero-text {
+    margin-bottom: 40px;
+} */
+.container .hero-text h1 {
+    color: #eee;
+    font-size: 47px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin: 20px 0 20px;
+    text-transform: capitalize
+}
+
+.container .hero-text h1 span {
+    color: #15767c;
+}
+
+.container .hero-text h3 {
+    color: #eee;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.container .hero-text p {
+    width: 440px;
+    max-width: 100%;
+    color: #eee;
+    margin-bottom: 30px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.container .hero-text .social {
+    /* border: 1px solid red; */
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.hero-text .social a {
+    background: rgba(255, 255, 255, 0.1);
+    color: #eee;
+    width: 37px;
+    height: 37px;
+    font-size: 17px;
+    margin-right: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.hero-text .social a:hover {
+    background: #15767c;
+    transform: scale(1.1);
+    transition: transform .4s;
+}
+
+.container .hero-text .cv-button {
+    color: #eee;
+    background-color: #15767c;
+    border: 2px solid #15767c;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    padding: 5px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.container .hero-text .cv-button:hover {
+    background: transparent;
+    border: 2px solid #15767c;
+    color: #15767c;
+    transition: .4s;
+}
+
+.bottom {
+    /* border: 1px solid yellow; */
+    position: fixed;
+    bottom: 10px;
+    color: #eee;
+    font-size: 12px;
+    font-weight: 200;
+    letter-spacing: 2px;
+}
+
+/* changes to be done from here ! */
+/* ------------------------------------------------------- */
+
+@media only screen and (max-width: 930px) {
+    nav .hamb {
+        display:initial;
+    }
+    /* .click {
+        margin-top: 46px;
+    } */
+    .click span {
+        position: absolute;
+        margin-top: 10px;
+    }
+    .click span:first-child {
+        transform: rotate(-40deg);
+    }
+    .click span:nth-child(2) {
+        opacity:0;
+        margin:0;
+    }
+    .click span:last-child {
+        transform: rotate(40deg);
+        top: 0;
+    }
+    nav .nav-list {
+        position: absolute;
+        top: 90px;
+        right: -65%;
+        bottom: 0;
+        width: 60%;
+        height: 50%;
+        background: black;
+        z-index: 2;
+        padding: 6% 9%;
+        transition: .3s right;
+        border-radius: 10px;
+    }
+    nav .nav-list li {
+        display:block;
+    }
+    nav .nav-list li a {
+        display:block;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 300;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+    nav .nav-list li.btn a {
+        position: absolute;
+        bottom: 2%;
+        right: 20%;
+        left: 20%;
+        padding: 7px 15px;
+        font-size: 14px
+    }
+    nav .nav-list.open {
+        right: 0;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    nav .hamb {
+        margin-right: 1%;
+    }
+    .container {
+        padding-top: 50px;
+    }
+
+    .hero-text .social a {
+        margin-right: 10px;
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .hero-text .social .last-child-link {
+        margin-right: 0;
+    }
+
+    .container .hero-text h1 {
+        font-size: 35px;
+    }
+
+    .bottom {
+        margin-top: 130px;
+    }
+}
+
+@media only screen and (max-width: 285px) {
+    nav .hamb {
+        margin-right: 4%;
+    }
+    .container .hero-text h1 {
+        font-size: 30px;
+    }
+
+    .hero-text .social a {
+        margin-right: 5px;
+        width: 25px;
+        height: 25px;
+        font-size: 10px;
+    }
+
+    .hero-text .social .last-child-link {
+        margin-right: 0;
+    }
+
+    .bottom {
+        margin-top: 130px;
+    }
+}
+@media only screen and (max-width: 266px) {
+    nav .hamb {
+        margin-right: 6%;
+    }
+}
+
+/* Alternate color -- #EB3E1B */
