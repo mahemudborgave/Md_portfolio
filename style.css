@@ -241,6 +241,7 @@ nav .nav-list .btn a:hover {
         padding: 6% 9%;
         transition: .3s right;
         border-radius: 10px;
+        display:none;
     }
     nav .nav-list li {
         display:block;
@@ -263,6 +264,7 @@ nav .nav-list .btn a:hover {
     }
     nav .nav-list.open {
         right: 0;
+        display: block;
     }
 }
 
